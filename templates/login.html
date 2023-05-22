@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-{% load static %}
+{% extends 'basr.html' %}
 
 {% block content %}
-{{ error }}
+    {{ error }}
 
-<div class="register">
-    <h1>Войти</h1>
-    <hr class="line">
-    <form method="POST">
-        {% csrf_token %}
-        {% for field in form %}
-            <div>
-                <div class="label">
-                    {{ field.label_tag }}
+    <div class="register">
+        <h1>Войти</h1>
+        <hr class="line">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <div>
+                    <div class="label">
+                        {{ field.label_tag }}
+                    </div>
+                    <div class="field_input">
+                        {{ field }}
+                    </div>
                 </div>
-                <div class="field_input">
-                    {{ field }}
-                </div>
-            </div>
-        {% endfor %}
-        <button type="submit" class="button">Войти</button>
-    </form>
-</div>
+            {% endfor %}
+            <button type="submit" class="button">Войти</button>
+        </form>
+    </div>
 
 {% endblock %}

@@ -1,0 +1,58 @@
+ul.complex_list {
+    display: flex;
+}
+
+.complex_list li {
+    font: 0.75em arial;
+    list-style: none;
+}
+
+.complex_list li a {
+    text-decoration: none;
+    margin: 2px;
+    color: #fff;
+}
+
+/* меню */
+
+#menu li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+#menu a {
+    color: #111;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: x-large;
+    display: block;
+    line-height: 40px;
+
+}
+
+#menu a:hover {
+    color: #EF5A42;
+}
+
+body {
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.header {
+    padding: 2px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+
