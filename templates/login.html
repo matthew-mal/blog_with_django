@@ -1,44 +1,26 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-{#    <link rel="stylesheet" href="{% static 'recipes/style.css' %}">#}
-</head>
-<body>
+
 {% block content %}
+{{ error }}
 
-
-    <h1>{{ error }}</h1>
-
-    <div class="register">
-        <h1>Registration Page</h1>
-        <hr class="line">
-        <form method="POST">
-            {% csrf_token %}
-            {% for field in form %}
-
-                <div>
-                    <div class="label">
-                        {{ field.label_tag }}
-                    </div>
-                    <div class="field_input">
-                        {{ field }}
-                    </div>
-                    <div class="help_text">
-                        {{ field.help_text }}
-                    </div>
+<div class="register">
+    <h1>Войти</h1>
+    <hr class="line">
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <div>
+                <div class="label">
+                    {{ field.label_tag }}
                 </div>
-
-
-            {% endfor %}
-            <button type="submit" class="button">Register</button>
-        </form>
-    </div>
-
+                <div class="field_input">
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+        <button type="submit" class="button">Войти</button>
+    </form>
+</div>
 
 {% endblock %}
-
-</body>
-</html>
